@@ -1,2 +1,66 @@
-@import 'base';
-@import 'content';
+// @import 'base';
+// @import 'content';
+@import "base/all-base";
+
+h1 {
+  color: #ccc;
+  font-weight: 300;
+}
+
+figure {
+  margin: auto;
+}
+
+.content {
+  article {
+    padding: 100px 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    p {
+      color: #ababab;
+    }
+  }
+}
+
+img {
+  max-width: 100%
+}
+
+.bird-box {
+  position: relative;
+  height: 700px;
+  background: url(../images/snow.jpg) top center no-repeat;
+  background-attachment: fixed;
+  background-size: auto 1240px;
+  overflow: hidden;
+
+  .back-bird {
+    width: 150px;
+    height: 41px;
+    background: url(images/back-bird.png) top left no-repeat;
+    position: absolute;
+    // left: 50%;
+    top: 15%;
+    margin-left: 100px;
+  }
+
+  .logo {
+    width: 300px;
+    height: 92px;
+    // background: url(images/snow-dog-2.png) center no-repeat;
+    position: absolute;
+    top: 35%;
+    margin-left: 230px;
+  }
+
+  .fore-bird {
+    width: 600px;
+    height: 183px;
+    // background: url(images/snow-dog-3.png) right bottom no-repeat;
+    position: absolute;
+    // left: 50%;
+    margin-left: 570px;
+    top: 480px;
+  }
+}
