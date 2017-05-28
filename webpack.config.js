@@ -90,7 +90,7 @@ module.exports = {
         use: [{ loader: 'html-loader' }, { loader: 'pug-html-loader' }]
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|svg|ico)$/,
         exclude: /node_modules/,
         use: [
           {
