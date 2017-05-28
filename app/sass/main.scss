@@ -27,7 +27,7 @@ img {
   max-width: 100%
 }
 
-.bird-box {
+.headerParallaxBox {
   position: relative;
   height: 700px;
   background: url(../images/snow.jpg) top center no-repeat;
@@ -35,17 +35,17 @@ img {
   background-size: auto 1240px;
   overflow: hidden;
 
-  .back-bird {
+  .headerParallaxBox__backBanner {
     height: 150px;
     width: 50%;
-    top: 25%;
+    top: 30%;
     background: url(../images/2017-sm.png) top left no-repeat;
     position: absolute;
     left: 25%;
     // background-color: rgba(255, 99, 71, 0.42);
   }
 
-  .logo {
+  .headerParallaxBox__middleBanner {
     height: 100px;
     width: 75%;
     top: 45%;
@@ -55,7 +55,7 @@ img {
     // background-color: rgba(255, 99, 71, 0.42);
   }
 
-  .fore-bird {
+  .headerParallaxBox__frontBanner {
     height: 250px;
     width: 90%;
     background: url(../images/2017-lg.png) right bottom no-repeat;

@@ -3,18 +3,18 @@ import 'jquery';
 $(function () {
   $(window).scroll(function(){
 
-    var wScroll = $(this).scrollTop();
+    const wScroll = $(this).scrollTop();
 
-    $('.logo').css({
-      'transform' : 'translate(0px, '+ wScroll /4 +'%)'
-    });
-
-    $('.back-bird').css({
+    $('.headerParallaxBox__backBanner').css({
       'transform' : 'translate(0px, '+ wScroll /2 +'%)'
     });
 
-    $('.fore-bird').css({
-      'transform' : 'translate(0px, -'+ wScroll /8 +'%)'
+    $('.headerParallaxBox__middleBanner').css({
+      'transform' : 'translate(0px, '+ wScroll /3 +'%)'
+    });
+
+    $('.headerParallaxBox__frontBanner').css({
+      'transform' : 'translate(0px, -'+ wScroll /9 +'%)'
     });
 
   });
