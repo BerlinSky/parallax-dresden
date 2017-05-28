@@ -79,17 +79,31 @@ img {
     margin-right: auto;
     margin-left: auto;
 
-    .grid {
+    .responsiveImage {
+      max-width: 100%;
+    }
+
+    .photoGallery__photoFrame {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-    }
-    .cell {
-      // flex-basis: calc(100% / 3);
-      margin: 1rem;
-      flex-basis: calc(25% - 2rem);
+
+      .photoGallery__photo {
+        // flex-basis: calc(100% / 3);
+        margin: 1rem;
+        flex-basis: calc(25% - 2rem);
+
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease-in-out; 
+      }
+
+      .photoGallery__photo.photoGallery__photo--show {
+        opacity: 1;
+        transform: translateX(0px); 
+      }
     }
   }
 }
