@@ -1,21 +1,22 @@
 import 'jquery';
 
-import { helpMe } from './helper';
-import { checkAsyncResult } from './use-async';
-
-const siteSetup = () => {
-  console.log("Set up ... in arrow function now")
-}
-
-const testjQuery = () => {
-  const thisBody = $('body');
-  thisBody.css({ 'color': '#fff' })
-}
-
 $(function () {
-  helpMe();
-  siteSetup();
-  checkAsyncResult();
-  testjQuery();
+  $(window).scroll(function(){
+
+    var wScroll = $(this).scrollTop();
+
+    $('.logo').css({
+      'transform' : 'translate(0px, '+ wScroll /4 +'%)'
+    });
+
+    $('.back-bird').css({
+      'transform' : 'translate(0px, '+ wScroll /2 +'%)'
+    });
+
+    $('.fore-bird').css({
+      'transform' : 'translate(0px, -'+ wScroll /8 +'%)'
+    });
+
+  });
 });
 
