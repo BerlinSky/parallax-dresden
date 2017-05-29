@@ -107,3 +107,13 @@ img {
     }
   }
 }
+
+ .large-telescopeView {
+  height: 640px;
+  background-image: url(../images/musician.jpg);
+  background-position: center 0px;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  margin-top: 100px;
+  border-radius: 50%; 
+}
