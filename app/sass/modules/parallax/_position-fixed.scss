@@ -1,7 +1,9 @@
 $colorPaleWhite: #f4f4f4;
 $colorScarlet: #924444;
 
-.nav.navBar {
+
+
+.navBar {
 	background-color: $colorPaleWhite;
 	position: fixed;
 	left: 0;
@@ -12,16 +14,25 @@ $colorScarlet: #924444;
 	display: flex;
 	align-items: center;
 
+  a {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+
+  a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+  }
+
+  .navLogo {
+    padding-left: 1rem;
+  }
+
   .navBar__main {
     display: flex;
-    margin: 0 1em 0 auto;
+    margin: 0 1rem 0 auto;
 
     li {
       padding: 1em;
-
-      a.navLink {
-        text-decoration: none;
-      }
     }
   }
 }
