@@ -1,0 +1,58 @@
+$colorPaleWhite: #f4f4f4;
+$colorScarlet: #924444;
+
+.nav.navBar {
+	background-color: $colorPaleWhite;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	// height: 6rem;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+
+  .navBar__main {
+    display: flex;
+    margin: 0 1em 0 auto;
+
+    li {
+      padding: 1em;
+
+      a.navLink {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.mainContent {
+	background: $colorPaleWhite;
+	padding: 20rem 0 0;
+
+  h1 {
+    padding-top: 2rem;
+    color: $colorScarlet;
+    font-weight: 300;
+  }
+
+  .siteBanner {
+    background-size: contain;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80rem;
+  }
+
+  .siteBanner--background {
+    background: center top transparent no-repeat url(../images/desktop.jpg);
+  }
+
+  .contentWrapper {
+    background: $colorPaleWhite;
+    margin-top: 30rem;
+    padding: 0.5rem 15% 0;
+    position: relative;
+  }
+}
