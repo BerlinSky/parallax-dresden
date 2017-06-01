@@ -2,118 +2,53 @@
 // @import 'content';
 @import "base/all-base";
 
+.nav {
+	background-color: #f9ebdb;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	// height: 6em;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+}
+
+.main-nav {
+	display: flex;
+	margin: 0 1em 0 auto;
+}
+
+.main-nav li {
+	padding: 1em;
+}
+
 h1 {
   color: #ccc;
   font-weight: 300;
 }
 
-figure {
-  margin: auto;
-}
-
 .content {
-  article {
-    padding: 100px 0;
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-    p {
-      color: #ababab;
-    }
-  }
+	background: #f3e3cf;
+	padding: 6rem 0 0;
 }
 
-img {
-  max-width: 100%
+.banner {
+	background-size: contain;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 70rem;
 }
 
-.headerParallaxBox {
-  position: relative;
-  height: 700px;
-  background: url(../images/snow.jpg) top center no-repeat;
-  background-attachment: fixed;
-  background-size: auto 1240px;
-  overflow: hidden;
-
-  .headerParallaxBox__backBanner {
-    height: 150px;
-    width: 50%;
-    top: 30%;
-    background: url(../images/2017-sm.png) top left no-repeat;
-    position: absolute;
-    left: 25%;
-    // background-color: rgba(255, 99, 71, 0.42);
-  }
-
-  .headerParallaxBox__middleBanner {
-    height: 100px;
-    width: 75%;
-    top: 45%;
-    background: url(../images/2017-md.png) center no-repeat;
-    position: absolute;
-    left: 10%;
-    // background-color: rgba(255, 99, 71, 0.42);
-  }
-
-  .headerParallaxBox__frontBanner {
-    height: 250px;
-    width: 90%;
-    background: url(../images/2017-lg.png) right bottom no-repeat;
-    position: absolute;
-    right: 5%;
-    top: 400px;
-    // background-color: rgba(255, 99, 71, 0.42);
-  }
+.banner--homepage {
+  background: center top transparent no-repeat url(../images/snow.jpg);
 }
 
-// Photo Gallery
-.photoGallery {
-  // background-color: turquoise;
-
-  width: 100%;
-  margin: 0;
-
-  @media screen and (min-width: 600px) {
-    display: block;
-    max-width: 640px;
-    margin-right: auto;
-    margin-left: auto;
-
-    .responsiveImage {
-      max-width: 100%;
-    }
-
-    .photoGallery__photoFrame {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-
-      .photoGallery__photo {
-        // flex-basis: calc(100% / 3);
-        margin: 1rem;
-        flex-basis: calc(25% - 2rem);
-
-        opacity: 0;
-        transform: translateX(20px);
-        transition: all 0.3s ease-in-out; 
-      }
-
-      .photoGallery__photo.photoGallery__photo--show {
-        opacity: 1;
-        transform: translateX(0px); 
-      }
-    }
-  }
-}
-
-.telescopeView {
-  height: 640px;
-  background-image: url(../images/musician.jpg);
-  background-position: center 0px;
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  margin-top: 100px;
-  border-radius: 50%; 
+.page-content {
+	background: #eed8bd;
+	margin-top: 30rem;
+	padding: 0.5rem 15% 0;
+	position: relative;
 }
