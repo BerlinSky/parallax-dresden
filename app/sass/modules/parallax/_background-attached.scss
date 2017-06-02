@@ -1,0 +1,106 @@
+$colorPaleWhite: #f4f4f4;
+$colorPaleGrey: #d0c8c8;
+$colorScarlet: #924444;
+
+.navBar {
+	background-color: $colorPaleGrey;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	// height: 6rem;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+
+  a {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+
+  a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+  }
+
+  .navLogo {
+    padding-left: 1rem;
+  }
+
+  .navBar__main {
+    display: flex;
+    margin: 0 1rem 0 auto;
+
+    li {
+      padding: 1em;
+    }
+  }
+}
+
+.mainContent {
+	background: $colorPaleWhite;
+	padding: 20rem 0 0;
+
+  h1 {
+    padding-top: 2rem;
+    color: $colorScarlet;
+    font-weight: 300;
+  }
+
+  .siteBanner {
+    background-size: contain;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50rem;
+  }
+
+  .siteBanner--background {
+    background: center top transparent no-repeat url(../images/waterfall.jpg);
+  }
+
+  .contentWrapper {
+    background: $colorPaleWhite;
+    margin-top: 30rem;
+    padding: 0.5rem 15% 0;
+    position: relative;
+
+    .content-inner {
+      height: 500px;
+      position: relative;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+.content-inner.two,
+.content-inner.four {
+	margin-bottom: 5rem;
+}
+
+    .content-inner.one {
+      background-image: url(../images/golden-gate-1.jpg);
+    }
+
+    .content-inner.two {
+      background-image: url(../images/golden-gate-2.jpg);
+    }
+
+    .content-inner.three {
+      background-image: url(../images/night-bridge-1.jpg);
+    }
+
+    .content-inner.four {
+      background-image: url(../images/night-bridge-2.jpg);
+    }
+
+    .content-inner.five {
+      background-image: url(../images/mountain-road-1.jpg);
+    }
+
+    .content-inner.six {
+      background-image: url(../images/mountain-road-2.jpg);
+    }
+
+  }
+}
