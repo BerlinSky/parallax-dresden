@@ -1,8 +1,7 @@
 ## A collection parallax projects
 
-### Header section: Position-Absolute
+### Header section: Background attached.
 
-### Hosted on: uttermost-card.surge.sh
 
 
 
