@@ -1,0 +1,29 @@
+.contentWrapper {
+  padding: 0.5rem 0;
+
+  .contentSection {
+    padding: 4rem 15%;
+  }
+
+  .contentImage {
+    height: 600px;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contentImage--one {
+    background-image: url(../images/golden-gate-2.jpg);
+  }
+
+  .contentImage--two{
+    background-image: url(../images/night-bridge-2.jpg);
+  }
+
+  .contentImage--three {
+    background-image: url(../images/mountain-road-2.jpg);
+  }
+
+}
+

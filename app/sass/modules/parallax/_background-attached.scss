@@ -62,7 +62,7 @@ $colorScarlet: #924444;
   .contentWrapper {
     background: $colorPaleWhite;
     margin-top: 30rem;
-    padding: 0.5rem 15% 0;
+    // padding: 0.5rem 15% 0;
     position: relative;
 
     .content-inner {
@@ -73,10 +73,10 @@ $colorScarlet: #924444;
       background-position: center;
     }
 
-.content-inner.two,
-.content-inner.four {
-	margin-bottom: 5rem;
-}
+    .content-inner.two,
+    .content-inner.four {
+      margin-bottom: 5rem;
+    }
 
     .content-inner.one {
       background-image: url(../images/golden-gate-1.jpg);

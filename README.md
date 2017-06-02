@@ -1,6 +1,6 @@
 ## A collection parallax projects
 
-### Header section: Background attached.
+### Header section: Background attached with full-width.
 
 
 
