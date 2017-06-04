@@ -34,5 +34,43 @@ $colorScarlet: #924444;
     margin-top: 16rem;
     padding: 0.5rem 15% 0;
     position: relative;
+
+    .content-inner {
+      height: 500px;
+      position: relative;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content-inner.two,
+    .content-inner.four {
+      margin-bottom: 5rem;
+    }
+
+    .content-inner.one {
+      background-image: url(../images/golden-gate-1.jpg);
+    }
+
+    .content-inner.two {
+      background-image: url(../images/golden-gate-2.jpg);
+    }
+
+    .content-inner.three {
+      background-image: url(../images/night-bridge-1.jpg);
+    }
+
+    .content-inner.four {
+      background-image: url(../images/night-bridge-2.jpg);
+    }
+
+    .content-inner.five {
+      background-image: url(../images/mountain-road-1.jpg);
+    }
+
+    .content-inner.six {
+      background-image: url(../images/mountain-road-2.jpg);
+    }
   }
+  
 }

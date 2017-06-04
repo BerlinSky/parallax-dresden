@@ -1,0 +1,36 @@
+.imageContainer {
+  height: 500px;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.imageContainer.two,
+.imageContainer.four {
+  margin-bottom: 5rem;
+}
+
+.imageContainer.one {
+  background-image: url(../images/golden-gate-1.jpg);
+}
+
+.imageContainer.two {
+  background-image: url(../images/golden-gate-2.jpg);
+}
+
+.imageContainer.three {
+  background-image: url(../images/night-bridge-1.jpg);
+}
+
+.imageContainer.four {
+  background-image: url(../images/night-bridge-2.jpg);
+}
+
+.imageContainer.five {
+  background-image: url(../images/mountain-road-1.jpg);
+}
+
+.imageContainer.six {
+  background-image: url(../images/mountain-road-2.jpg);
+}
