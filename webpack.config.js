@@ -15,17 +15,15 @@ const providerPlugin = new webpack.ProvidePlugin({
 
 const cleanWebPackPlugin = new CleanWebpackPlugin(['dist'])
 
-const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  template: 'app/index.pug',
-  favicon: 'app/favicon.png'
+const minifyPlugin = new webpack.LoaderOptionsPlugin({
+  minimize: true,
+  debug: false
 })
-
-const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({ })
 
 module.exports = {
   entry: {
     index: [
-      path.resolve(__dirname, 'app/index.pug'),
+      // path.resolve(__dirname, 'app/index.pug'),
       path.resolve(__dirname, 'app/index.js'),
       path.resolve(__dirname, 'app/sass/main.scss')
     ]
@@ -45,7 +43,10 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['es2015', 'es2017'],
+              presets:  [
+                [ 'es2015', { modules: false } ],
+                [ 'es2017' ]
+              ],
               plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
             }
           },
@@ -87,10 +88,17 @@ module.exports = {
       {
         test: /\.pug$/,
         exclude: /node_modules/,
-        use: [{ loader: 'html-loader' }, { loader: 'pug-html-loader' }]
+        use: [
+          { loader: 'html-loader' }, 
+          { loader: 'pug-html-loader',
+            options: {
+              name: '[name],[ext]'
+            }
+          }
+        ]
       },
       {
-        test: /\.(jpg|png|svg|ico)$/,
+        test: /\.(jpg|png)$/,
         exclude: /node_modules/,
         use: [
           {
@@ -109,8 +117,19 @@ module.exports = {
     extractPlugin,
     providerPlugin,
     cleanWebPackPlugin,
-    htmlWebpackPlugin,
-    uglifyJsPlugin
+    new HtmlWebpackPlugin({
+      favicon: 'app/favicon.png',
+      chunnk: ['index'],
+      template: 'app/index.pug',
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      favicon: 'app/favicon.png',
+      chunnk: ['index'],
+      template: 'app/service.pug',
+      filename: 'service.html'
+    }),
+    minifyPlugin
   ],
   devServer: {
     host: 'localhost',

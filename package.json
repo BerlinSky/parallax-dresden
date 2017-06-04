@@ -1,11 +1,11 @@
 {
-  "name": "parallax-dresden",
+  "name": "webpack2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack -p"
   },
   "author": "",
   "license": "ISC",
