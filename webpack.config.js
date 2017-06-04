@@ -132,6 +132,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       favicon: 'app/favicon.png',
       chunnk: ['index'],
+      template: 'app/news.pug',
+      filename: 'news.html'
+    }),
+    new HtmlWebpackPlugin({
+      favicon: 'app/favicon.png',
+      chunnk: ['index'],
       template: 'app/post.pug',
       filename: 'post.html'
     }),
