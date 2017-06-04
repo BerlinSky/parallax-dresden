@@ -34,4 +34,12 @@ $colorScarlet: #924444;
     padding: 0.5rem 15% 0;
     position: relative;
   }
+
+  .contentWrapper.contentWrapper--fullWidth {
+    padding: 0.5rem 0;
+
+    .contentSection {
+      padding: 4rem 15%;
+    }
+  }  
 }
