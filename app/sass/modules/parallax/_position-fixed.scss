@@ -55,6 +55,10 @@ $colorScarlet: #924444;
     height: 35rem;
   }
 
+  .siteBanner--absolute {
+    position: absolute;
+  }
+
   .siteBanner--background {
     background: center top transparent no-repeat url(../images/volcano.jpg);
   }

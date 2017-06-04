@@ -120,6 +120,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       favicon: 'app/favicon.png',
       chunnk: ['index'],
+      template: 'app/site.pug',
+      filename: 'site.html'
+    }),
+    new HtmlWebpackPlugin({
+      favicon: 'app/favicon.png',
+      chunnk: ['index'],
       template: 'app/index.pug',
       filename: 'index.html'
     }),
