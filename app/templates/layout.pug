@@ -3,10 +3,12 @@ html
   head
     include includes/head
 
-  body(style="zoom: 1;")
+  body
+    .pageWrapper 
+    
+      block content
 
-    include includes/header
+    //- include includes/header
 
-    block content
 
-    include includes/footer
+    //- include includes/footer
