@@ -18,4 +18,8 @@
 1. The banner will start from the bottom of the nav bar and stick to the top of the content wrapper
 2. The content will scroll underneath of the banner
 
+### Modified the content wrapper to allow the content be scrolled over the banner
+1. The banner image will start from the bottom of the nav bar and stick to the top of the content wrapper
+2. The content will scroll over the banner
+
 
