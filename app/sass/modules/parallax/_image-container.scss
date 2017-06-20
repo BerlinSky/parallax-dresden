@@ -1,0 +1,13 @@
+.imageContainer {
+  height: 30rem;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  margin-bottom: 3rem;
+}
+
+.imageContainer.banner {
+  background-image: url(../images/volcano.jpg);
+}
