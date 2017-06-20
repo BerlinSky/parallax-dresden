@@ -1,0 +1,16 @@
+$colorTomato:  #f4f4f4;
+$black: #777;
+
+.pageWrapper {
+  background-color: $colorTomato;
+  border: 1px solid $black;
+
+  position: relative;
+  
+  padding: 0;
+  margin: 0 auto;
+
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1170px;
+}
