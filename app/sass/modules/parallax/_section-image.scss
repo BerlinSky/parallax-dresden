@@ -4,8 +4,19 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-
-  // margin-bottom: 3rem;
   background-image: url(../images/tour-bg-bottom.jpg);
+}
+
+.sectionImage__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 30%;
+  left: 0;
+
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-image: url(../images/tour-bg-top.png);
 }
 
