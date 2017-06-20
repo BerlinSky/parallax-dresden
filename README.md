@@ -14,4 +14,8 @@
 1. The page content will start from the bottom of the nav bar
 2. The page content will scroll underneath of the nav bar
 
+### Add a "absolte" banner inside content wrapper and on the top of content container
+1. The banner will start from the bottom of the nav bar and stick to the top of the content wrapper
+2. The content will scroll underneath of the banner
+
 
