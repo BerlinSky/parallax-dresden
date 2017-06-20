@@ -11,10 +11,12 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 30%;
   left: 0;
+  top: 30%;
 
-  background-size: cover;
+  // background-size: cover;
+  background-size: 30% 30%;
+
   background-position: center; 
   background-repeat: no-repeat;
   background-image: url(../images/tour-bg-top.png);
