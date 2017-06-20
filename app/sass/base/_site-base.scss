@@ -6,8 +6,9 @@
 }
 
 html, body {
-    min-width: 240px;
-    overflow-x: hidden;
+  min-width: 240px;
+  overflow: hidden;
+  height: 100vh;
 }
 
 body {
