@@ -1,13 +1,11 @@
-.imageContainer {
+.sectionImage {
   min-height: 30rem;
   position: relative;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 
-  // margin-bottom: 1rem;
+  // margin-bottom: 3rem;
+  background-image: url(../images/tour-bg-bottom.jpg);
 }
 
-.imageContainer.banner {
-  background-image: url(../images/nickelback-slider.png);
-}
