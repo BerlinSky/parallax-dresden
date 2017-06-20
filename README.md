@@ -7,6 +7,9 @@
 3. Occupies the entire view port with 100vh
 
 
+### Add a "fixed" page header
 
+1. The nav will fixed to the top of the wrapper
+2. The nav will span the entire width of the wrapper.
 
 
