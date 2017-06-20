@@ -17,6 +17,20 @@
   background-image: url(../images/news-bg.jpg);
 }
 
+.sectionImage--videos {
+  min-height: 50rem;
+  width: 100%;
+  height: auto;
+  background-image: url(../images/videos-bg-bottom.jpg);
+}
+
+.sectionImage--music {
+  min-height: 50rem;
+  width: 100%;
+  height: auto;
+  background-image: url(../images/music-bg.jpg);
+}
+
 .sectionImage__overlay {
   position: absolute;
   height: 100%;
