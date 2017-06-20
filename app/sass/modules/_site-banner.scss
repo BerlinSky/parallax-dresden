@@ -1,0 +1,16 @@
+.siteBanner {
+    background-size: contain;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 30rem;
+  }
+
+  .siteBanner--absolute {
+    position: absolute;
+  }
+
+  .siteBanner--background {
+    background: center top transparent no-repeat url(../images/volcano.jpg);
+  }
