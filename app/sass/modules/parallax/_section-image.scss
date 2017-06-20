@@ -1,10 +1,20 @@
 .sectionImage {
-  min-height: 30rem;
   position: relative;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+}
+
+.sectionImage--tour {
+  min-height: 30rem;
   background-image: url(../images/tour-bg-bottom.jpg);
+}
+
+.sectionImage--news {
+  min-height: 50rem;
+  width: 100%;
+  height: auto;
+  background-image: url(../images/news-bg.jpg);
 }
 
 .sectionImage__overlay {
