@@ -12,9 +12,13 @@ const animateSectionImage = () => {
     const wScroll = $(this).scrollTop();
    
     const topPos = (wScroll < 100) ? (100 - wScroll) : 0;
-    const size = (wScroll/8) + '%' + ' ' + (wScroll/8) + '%';
+    // const size = (wScroll/8) + '%' + ' ' + (wScroll/8) + '%';
 
-    // console.log(topPos);
+    console.log(wScroll);
+    
+    const size = wScroll < 100 ? '100% auto' : (wScroll / 100) * Math.PI * 2 + 100  + '%' + ' ' + 'auto';
+
+    console.log(size);
 
     $('.sectionImage__overlay').css({
       'top': topPos +'%',
