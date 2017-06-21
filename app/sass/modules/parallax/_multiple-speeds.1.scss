@@ -1,0 +1,76 @@
+$colorPaleWhite: #f4f4f4;
+$colorPaleGrey: #d0c8c8;
+$colorScarlet: #924444;
+
+.eventImageContainer {
+	perspective: 300px;
+	margin-top: 3.5rem;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	.eventImageContainer__imageBox {
+		position: relative;
+		height: 1500px;
+	}
+
+	.boxLayered {
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-color: transparent;
+		background-size: contain;
+		position: absolute;
+		right: -3%;
+		bottom: 0;
+		left: -3%;
+	}
+
+	.layer--05 {
+		transform: translateZ(0);
+		background-image: url(../images/AboutBannerLevel5.png);
+		top: 2em;
+	}
+
+	.layer--04 {
+		transform: translateZ(-150px) scale(1.52);
+		background-image: url(../images/AboutBannerLevel4.png);
+		top: 6em;
+	}
+
+	.layer--03 {
+		transform: translateZ(-300px) scale(2.03);
+		background-image: url(../images/AboutBannerLevel3.png);
+		top: 10em;
+	}
+
+	.layer--02 {
+		transform: translateZ(-450px) scale(2.52);
+		background-image: url(../images/AboutBannerLevel2.png);
+		top: 14em;
+	}
+
+	.layer--01 {
+		transform: translateZ(-600px) scale(3.05);
+		background-image: url(../images/AboutBannerLevel1.png);
+		top: 18em;
+	}
+}
+
+
+
+.eventContent {
+	background: $colorPaleWhite;
+	position: relative;
+	margin-top: -1000px;
+	padding: 0 15%;
+	z-index: 50;
+
+	h1 {
+    padding-top: 2rem;
+    color: $colorScarlet;
+    font-weight: 300;
+  }
+}
+
+
+
