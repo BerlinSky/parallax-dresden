@@ -3,7 +3,31 @@ import 'jquery';
 $(function () {
   console.log("enjoy parallax");
   animateSectionImage();
+
+  zoomSectionImage();
 });
+
+const zoomSectionImage = () => {
+
+  $('.l-contentContainer').scroll(function() {
+
+    const wScroll = $(this).scrollTop();;
+    const winHeight = $(window).height();
+    const section = $('.js-sectionImage--music');
+    const sectionTop = section.offset().top;
+
+    if (winHeight > sectionTop + 100) {
+      // console.log(sectionTop, wScroll, winHeight);
+
+      const size = (winHeight - sectionTop) < 100 ? '100% auto' : (wScroll / 100) * Math.PI / 3 + 100  + '%' + ' ' + 'auto';
+
+      section.css({
+        'background-size': size
+      })
+      // 
+    }
+  })
+}
 
 const animateSectionImage = () => {
   // const container = $('.section.sectionImage');
