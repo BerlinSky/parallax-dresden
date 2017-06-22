@@ -5,6 +5,8 @@ $(function () {
   animateSectionImage();
 
   zoomSectionImage();
+
+  multipleSpeedForSectionImages();
 });
 
 const zoomSectionImage = () => {
@@ -50,4 +52,28 @@ const animateSectionImage = () => {
     });
 
   });
+}
+
+const multipleSpeedForSectionImages = () => {
+
+  $('.l-contentContainer').scroll(function() {
+    // const wScroll = $(this).scrollTop();
+
+    const triggerPoint = $(window).height() - 100;
+    const section = $('.sectionImage--videos');
+    const sectionTop = section.offset().top;
+
+    if (sectionTop < triggerPoint) {
+      // console.log(sectionTop, (triggerPoint - sectionTop) / triggerPoint);
+
+      const change = 1 + (triggerPoint - sectionTop) / triggerPoint;
+
+       $('.sectionImage__middle ').css({
+
+        'transform': 'scale(' + change + ', ' + change + ')'
+      });
+    }
+   
+  });
+
 }
