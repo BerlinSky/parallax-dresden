@@ -68,12 +68,16 @@ const multipleSpeedForSectionImages = () => {
 
       const change = 1 + (triggerPoint - sectionTop) / triggerPoint;
 
-       $('.sectionImage__middle ').css({
-
+      $('.sectionImage__middle ').css({
         'transform': 'scale(' + change + ', ' + change + ')'
+      });
+
+      const changePlus = change * 1.25;
+      
+      $('.sectionImage__top ').css({
+        'transform': 'scale(' + changePlus + ', ' + changePlus + ')'
       });
     }
    
   });
-
 }
