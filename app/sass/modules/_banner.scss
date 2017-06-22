@@ -1,0 +1,20 @@
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vw * 560/1440);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include break(bannerImage) {
+    background-size: cover;
+  }
+}
+
+.banner--image {
+  background-image: url(../images/nickelback-slider.png);
+}
+
