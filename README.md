@@ -2,10 +2,12 @@
 
 ### The page structure
 ```
-body
-  nav = Navigation 
+body.l-pageParallax 
 
-  content = Site content
+  .navBar = Page Navigation
+
+  content = pageContentWrapper 
+  
     banner = Site banner
 
     pageContent = Page content

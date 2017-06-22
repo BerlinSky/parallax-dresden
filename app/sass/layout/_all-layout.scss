@@ -1,11 +1,14 @@
 @import "./page-header";
 @import "./page-wrapper";
-@import "./page-content-wrapper";
-@import "./content-container";
+// @import "./page-content-wrapper";
+// @import "./content-container";
 
 .l-pageParallax {
   // background: tomato;
 
-	height: 100%;
+	height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
 	position: relative;
 }

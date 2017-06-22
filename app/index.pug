@@ -2,25 +2,23 @@ extends templates/layout
 
 block content
   .pageContentWrapper
-    .l-contentContainer
+    .imageContainer.banner
 
-      .imageContainer.banner
+    .section.sectionImage.sectionImage--tour 
+      .sectionImage__overlay
 
-      .section.sectionImage.sectionImage--tour 
-        .sectionImage__overlay
+      include temp-section-content
 
-        include temp-section-content
+    .section.sectionImage.sectionImage--news
+      include temp-section-content
 
-      .section.sectionImage.sectionImage--news
-        include temp-section-content
+    .section.sectionImage.sectionImage--videos
+      .sectionImage__middle
+      .sectionImage__top
+      include temp-section-content
 
-      .section.sectionImage.sectionImage--videos
-        .sectionImage__middle
-        .sectionImage__top
-        include temp-section-content
-
-      .section.sectionImage.sectionImage--music.js-sectionImage--music
-        include temp-section-content
-        
-      .section 
-        h2 Footer
+    .section.sectionImage.sectionImage--music.js-sectionImage--music
+      include temp-section-content
+      
+    .section 
+      h2 Footer
