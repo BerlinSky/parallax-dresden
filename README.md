@@ -6,8 +6,8 @@ body.l-pageParallax
 
   .navBar = Page Navigation
 
-  content = pageContentWrapper 
-  
+  .pageContentWrapper = content
+
     banner = Site banner
 
     pageContent = Page content
@@ -25,7 +25,7 @@ body.l-pageParallax
      contentSectionImage
 
     pageFooter = Page footer
-
+```
 
 
 
