@@ -3,8 +3,8 @@ import 'jquery';
 $(function () {
   console.log("enjoy parallax");
 
-  setBannerTop();
   setPageContentWrapperTop();
+  // setBannerTop();
 
   animateSectionImage();
 
@@ -13,30 +13,43 @@ $(function () {
   multipleSpeedForSectionImages();
 });
 
-const setBannerTop = () => {
+// const setBannerTop = () => {
+//   const navBar = $('.js-navBar');
+//   const navTop = navBar.offset().top;
+//   const navHeight = navBar.height();
+//   const banner = $('.js-banner');
+
+//   banner.css({
+//     'top': navTop + navHeight
+//   })
+// }
+
+const setPageContentWrapperTop = () => {
   const navBar = $('.js-navBar');
   const navTop = navBar.offset().top;
   const navHeight = navBar.height();
-  const banner = $('.js-banner');
+   const wrapper = $('.js-pageContentWrapper');
 
-  banner.css({
-    'top': navTop + navHeight
-  })
-}
-
-const setPageContentWrapperTop = () => {
-  
-  const banner = $('.js-banner');
-  const bannerTop = banner.offset().top;
-  const bannerHeight = banner.height();
-  const wrapper = $('.js-pageContentWrapper');
-
-  console.log(bannerTop + bannerHeight);
+  console.log(navTop + navHeight);
 
   wrapper.css({
-    'margin-top': bannerTop + bannerHeight
+    'margin-top': navTop + navHeight
   })
 }
+
+// const setPageContentWrapperTop = () => {
+  
+//   const banner = $('.js-banner');
+//   const bannerTop = banner.offset().top;
+//   const bannerHeight = banner.height();
+//   const wrapper = $('.js-pageContentWrapper');
+
+//   console.log(bannerTop + bannerHeight);
+
+//   wrapper.css({
+//     'margin-top': bannerTop + bannerHeight
+//   })
+// }
 
 const zoomSectionImage = () => {
 
