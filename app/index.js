@@ -4,52 +4,41 @@ $(function () {
   console.log("enjoy parallax");
 
   setPageContentWrapperTop();
-  // setBannerTop();
+  setBannerHeight();
 
   animateSectionImage();
 
   zoomSectionImage();
 
   multipleSpeedForSectionImages();
+
+  $( window ).resize(function() {
+    setPageContentWrapperTop();
+    setBannerHeight();
+  });
 });
-
-// const setBannerTop = () => {
-//   const navBar = $('.js-navBar');
-//   const navTop = navBar.offset().top;
-//   const navHeight = navBar.height();
-//   const banner = $('.js-banner');
-
-//   banner.css({
-//     'top': navTop + navHeight
-//   })
-// }
 
 const setPageContentWrapperTop = () => {
   const navBar = $('.js-navBar');
   const navTop = navBar.offset().top;
   const navHeight = navBar.height();
-   const wrapper = $('.js-pageContentWrapper');
-
-  console.log(navTop + navHeight);
+  const wrapper = $('.js-pageContentWrapper');
 
   wrapper.css({
     'margin-top': navTop + navHeight
   })
 }
 
-// const setPageContentWrapperTop = () => {
+const setBannerHeight = () => {
+    const banner = $('.js-banner');
+    const bannerWidth = banner.width();
+    const bannerTargetHeight = bannerWidth * 560 / 1440;
+
+    banner.css({
+      'height': bannerTargetHeight
+    })
+}
   
-//   const banner = $('.js-banner');
-//   const bannerTop = banner.offset().top;
-//   const bannerHeight = banner.height();
-//   const wrapper = $('.js-pageContentWrapper');
-
-//   console.log(bannerTop + bannerHeight);
-
-//   wrapper.css({
-//     'margin-top': bannerTop + bannerHeight
-//   })
-// }
 
 const zoomSectionImage = () => {
 
@@ -61,8 +50,6 @@ const zoomSectionImage = () => {
     const sectionTop = section.offset().top;
 
     if (winHeight > sectionTop + 100) {
-      // console.log(sectionTop, wScroll, winHeight);
-
       const size = (winHeight - sectionTop) < 100 ? '100% auto' : (wScroll / 100) * Math.PI / 3 + 100  + '%' + ' ' + 'auto';
 
       section.css({
@@ -74,19 +61,10 @@ const zoomSectionImage = () => {
 }
 
 const animateSectionImage = () => {
-  // const container = $('.section.sectionImage');
-
   $('.l-contentContainer').scroll(function() {
     const wScroll = $(this).scrollTop();
-   
     const topPos = (wScroll < 100) ? (100 - wScroll) : 0;
-    // const size = (wScroll/8) + '%' + ' ' + (wScroll/8) + '%';
-
-    // console.log(wScroll);
-    
     const size = wScroll < 100 ? '100% auto' : (wScroll / 100) * Math.PI * 2 + 100  + '%' + ' ' + 'auto';
-
-    // console.log(size);
 
     $('.sectionImage__overlay').css({
       'top': topPos +'%',
@@ -99,15 +77,11 @@ const animateSectionImage = () => {
 const multipleSpeedForSectionImages = () => {
 
   $('.l-contentContainer').scroll(function() {
-    // const wScroll = $(this).scrollTop();
-
     const triggerPoint = $(window).height() - 100;
     const section = $('.sectionImage--videos');
     const sectionTop = section.offset().top;
 
     if (sectionTop < triggerPoint) {
-      // console.log(sectionTop, (triggerPoint - sectionTop) / triggerPoint);
-
       const change = 1 + (triggerPoint - sectionTop) / triggerPoint;
 
       $('.sectionImage__middle ').css({

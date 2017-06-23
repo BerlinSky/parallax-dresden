@@ -5,8 +5,7 @@ $breakpoints: (
   md: 56rem, 	// 896px
   lg: 64rem,   // 1024px - iPad Mini
   xl: 76.50rem,  // 1224px
-  xx: 95rem,		// 1520px
-  bannerImage: 1440px
+  xx: 95rem		// 1520px
 );
 
 @mixin break($size) {

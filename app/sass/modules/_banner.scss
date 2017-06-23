@@ -1,20 +1,11 @@
 .banner {
-  // position: relative;
-  // top: 0;
-  // left: 0;
   width: 100vw;
-  height: 45rem;
-  // z-index: 5;
+  min-height: 1rem;
 
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 100% 15%;
   background-size: contain;
-
-  // @include break(bannerImage) {
-  //   // background-position: center;
-  //   background-size: cover ;
-  // }
 }
 
 .banner--image {
