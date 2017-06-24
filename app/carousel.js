@@ -4,9 +4,12 @@ import 'owl.carousel';
 
 export const setupCarousel = () => {
   $('.owl-carousel').owlCarousel({ 
-    loop:true,
-    margin:10,
-    responsiveClass:true,
+    loop: true,
+    center: true,
+    margin: 0,
+    nav: true,
+    animateOut: 'fadeOut',
+    responsiveClass: true,
     responsive:{
       0:{
           items:1,
