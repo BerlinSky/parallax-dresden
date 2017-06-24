@@ -10,7 +10,8 @@ const extractPlugin = new ExtractTextPlugin({
 
 const providerPlugin = new webpack.ProvidePlugin({
   $: 'jquery',
-  jQuery: 'jquery'
+  jQuery: 'jquery',
+  "window.jQuery" : "jquery"
 })
 
 const cleanWebPackPlugin = new CleanWebpackPlugin(['dist'])

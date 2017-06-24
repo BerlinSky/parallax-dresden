@@ -1,7 +1,10 @@
 import 'jquery';
+import { setupCarousel } from './carousel';
 
 $(function () {
   console.log("enjoy parallax");
+
+  setupCarousel();
 
   setPageContentWrapperTop();
   setBannerHeight();
@@ -17,6 +20,8 @@ $(function () {
     setBannerHeight();
   });
 });
+
+
 
 const setPageContentWrapperTop = () => {
   const navBar = $('.js-navBar');
