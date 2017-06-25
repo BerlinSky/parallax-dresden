@@ -23,5 +23,12 @@ export const windowScrolling = () => {
   const elemService = document.querySelector('.section.section--service');
   if (isElemVisiblePartially(elemService)) {
     elemService.classList.add('active');
+    
+    if (isElemVisibleFully(elemService)) {
+      elemService.classList.remove('active');
+    }
+  }
+  else {
+    elemService.classList.remove('active');
   }
 }
