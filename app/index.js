@@ -17,9 +17,9 @@ const scrollLoop = () => {
   const square = document.querySelector(".shape.shape--square");
   const pentagon = document.querySelector(".shape.shape--pentagon");
 
-  translateElem(circle, posX, posY * -0.2);
-  translateElem(square, posX, posY * -1.5);
-  translateElem(pentagon, posX, posY * -5);
+  translateElem(circle, posX, posY * -0.1);
+  translateElem(square, posX, posY * -2.0);
+  translateElem(pentagon, posX, posY * .5);
 
   // requestAnimationFrame(scrollLoop);
 }
