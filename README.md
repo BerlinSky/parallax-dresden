@@ -14,3 +14,10 @@
   ```
   app/index.pug
   ```
+3. Add JS methods
+  ```
+  js/animation/scrolling.js
+  ```
+
+  ### Clean up
+  1. Move styles from main.scss to a module
