@@ -2,6 +2,45 @@
 @import 'layout/all-layout';
 @import 'modules/all-module';
 
+ .shape.shape--circle {
+  background-image: url("http://bit.ly/yellowCircle");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 70%;
+  position: fixed;
+  top: 90px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: .75;
+}
+
+ .shape.shape--square {
+  background-image: url("http://bit.ly/blueSquare");
+  background-repeat: no-repeat;
+  background-position: 97% bottom;
+  background-size: 10%;
+  position: fixed;
+  top: 90px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  opacity: .75;
+}
+
+.shape.shape--pentagon {
+  background-image: url("http://bit.ly/greenPentagon");
+  background-repeat: no-repeat;
+  background-position: 5% top;
+  background-size: 50%;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -3;
+  opacity: .75;
+}
+
 .contentWrapper {
   margin: 7.25rem 0 5rem 0;
   padding: 0;
@@ -12,45 +51,9 @@
 
   .section {
     margin: 2rem 5rem 0 5rem;
-    background-color: #fff;
+    background-color: transparent;
     color: #000;
     padding: 3rem;
   }
 
-  .section--media {
-    transition: all .2s ease-in-out;
-    transform: translate3d(0, 30px, 0);
-    opacity: .9;
-  }
-
-  .section--media.active {
-    h3 {
-      color: #fff;
-    }
-    background-color: tomato;
-    color: #fff;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-
-  .section--service {
-    h3 {
-      color:#000;  
-    }
-    background-color: #fff;
-    color:#000;  
-    transition: all .2s ease-in-out;
-    transform: translate3d(0, 30px, 0);
-    opacity: .9;
-  }
-
-  .section--service.active {
-    h3 {
-      color:#096C46;  
-    }
-    background-color: #F9FF33;
-    color:#096C46;  
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
 }
