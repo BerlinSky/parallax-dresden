@@ -16,21 +16,24 @@
   }
 
   .section--news {
-    background-color: #9BC53D;
-    color: #000;
+    // background-color: #9BC53D;
+    // color: #000;
   }
 
   .section--media {
-    background-color: #333;
-    color: #FFF;
+    // background-color: #9BC53D;
+    // color: #000;
     transition: all .2s ease-in-out;
     transform: translate3d(0, 30px, 0);
     opacity: 1;
   }
 
   .section--media.active {
-    background-color: #333;
-    color: #FFF;
+    h3 {
+      color: #fff;
+    }
+    background-color: tomato;
+    color: #fff;
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
@@ -47,18 +50,4 @@
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
-
-  .section--support {
-    transition: all .2s ease-in-out;
-    transform: translate3d(0, 30px, 0);
-    opacity: 0;
-  }
-
-  .section--support.active {
-    background-color: tomato;
-    color: #FFF;
-    transform: translate3d(20px, 0, 0);
-    opacity: 1;
-  }
-
 }

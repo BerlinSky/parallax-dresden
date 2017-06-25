@@ -18,8 +18,6 @@ const isElemVisibleFully = (el) => isVisibleFully(winHeight, elemRect(el));
 
 const windowScrolling = () => {
 
-  console.log(winHeight);
-
   const elemMedia = document.querySelector('.section.section--media');
   if (isElemVisibleFully(elemMedia)) {
     elemMedia.classList.add('active');
