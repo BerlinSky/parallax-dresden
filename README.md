@@ -1,9 +1,16 @@
 ## Animate nav links
+## Scroll to activate 
 
-### Use CSS gradient and easing to animate the nav links
+### Calculate the position of an element to decide when to activate the animation
 
-### TODO's: Clean up
-
-1. Prone pug files
-2. Prone js files
-3. Prone scss files
+### Steps:
+1. Update these files for the css styles
+  ```
+  app/sass/base/_site-base.scss
+  app/sass/modules/_all-module.scss
+  app/sass/modules/_nav-bar.scss
+  ```
+2. Update the markup
+  ```
+  app/index.pug
+  ```
