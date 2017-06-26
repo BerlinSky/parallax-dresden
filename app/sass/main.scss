@@ -2,16 +2,30 @@
 @import 'layout/all-layout';
 @import 'modules/all-module';
 
- .shape.shape--circle {
+ .imageContent.imageContent--slider {
+  background-image: url("../images/nickelback-slider.png");
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-size: 100%;
+  position: fixed;
+  
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  opacity: 1;
+}
+
+.shape.shape--circle {
   background-image: url("../images/shapes/circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 45%;
+  background-size: 35%;
   position: fixed;
-  top: 80px;
+  top: 50vh;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: -2;
   opacity: .75;
 }
 
@@ -24,7 +38,7 @@
   top: 90px;
   width: 100vw;
   height: 100vh;
-  z-index: -2;
+  z-index: -3;
   opacity: .75;
 }
 
@@ -32,12 +46,12 @@
   background-image: url("../images/shapes/pentagon.svg");
   background-repeat: no-repeat;
   background-position: 5% top;
-  background-size: 35%;
+  background-size: 15%;
   position: fixed;
-  top: 0;
+  top: 75vh;
   width: 100vw;
   height: 100vh;
-  z-index: -3;
+  z-index: -4;
   opacity: .75;
 }
 
