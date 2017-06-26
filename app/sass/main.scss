@@ -8,6 +8,7 @@
   .flyoutMenu {
     width: 100vw;
     height: 100vh;
+    overflow-y: auto;
     background-color: #FFE600;
     position: fixed;
     top: 0;
