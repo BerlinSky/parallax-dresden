@@ -3,10 +3,10 @@
 @import 'modules/all-module';
 
  .shape.shape--circle {
-  background-image: url("http://bit.ly/yellowCircle");
+  background-image: url("../images/shapes/circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 70%;
+  background-size: 50%;
   position: fixed;
   top: 90px;
   width: 100vw;
@@ -16,10 +16,10 @@
 }
 
  .shape.shape--square {
-  background-image: url("http://bit.ly/blueSquare");
+  background-image: url("../images/shapes/square.svg");
   background-repeat: no-repeat;
   background-position: 97% bottom;
-  background-size: 30%;
+  background-size: 20%;
   position: fixed;
   top: 90px;
   width: 100vw;
@@ -29,10 +29,10 @@
 }
 
 .shape.shape--pentagon {
-  background-image: url("http://bit.ly/greenPentagon");
+  background-image: url("../images/shapes/pentagon.svg");
   background-repeat: no-repeat;
   background-position: 5% top;
-  background-size: 50%;
+  background-size: 40%;
   position: fixed;
   top: 0;
   width: 100vw;

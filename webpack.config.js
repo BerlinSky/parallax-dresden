@@ -98,13 +98,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|svg)$/,
         exclude: /node_modules/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name],[ext]',
+              name: '[name].[ext]',
               outputPath: 'images/',
               // publicPath: 'images/'
             }
