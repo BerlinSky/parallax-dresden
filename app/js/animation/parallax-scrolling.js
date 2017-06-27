@@ -23,57 +23,60 @@ const translateElem = (elem, posX, posY) => {
   elem.style.transform = ` translate3d(${posX}px, ${posY}px, 0)`;
 }
 
-
-const getElemBottom = (elem) => elem.getBoundingClientRect().bottom;
-
 export const windowParallaxScrolling = () => {
   window.addEventListener("DOMContentLoaded", parallaxScroll, false);
   requestAnimationFrame(parallaxScroll);
 }
 
-
 export const setTopPositions = () => {
-  const bottom = getElemBottom(imageSlider);
-  console.log(bottom);
-  // imageBgNew.style.top = bottom + "px";
+  steckImagesVertically(imageSlider, imageBgNews);
 
-// var sz = imageSlider.style.backgroundSize;
+  // var img = new Image();
+  // img.src = window.getComputedStyle(imageSlider).getPropertyValue("background-image");
+
+  // img.src = window.getComputedStyle(imageSlider).getPropertyValue("background-image").replace(/url\(|\)$/ig, "");
+
+  function resize() {
+
+    console.log("resized");
+
+
+    const img = new Image;
+    img.src = $(imageSlider).css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
+    // var bgHeight = img.height;
+    // var bgHeight  = img.height + 'px';
+
+// const size = $(imageSlider).css('background-size');
+
+ var bgHeight = document.body.offsetWidth * img.height / img.width;
+    console.log(bgHeight);
+
+    $(imageBgNews).css({ 'top': bgHeight} );
     
-//     console.log(sz);
-
-
-  // const thisElem = $('.imageContent.imageContent--slider');
-  getBackgroundImageHeight(imageSlider, imageBgNews);
-
-  // console.log(height);
-  // var img = new Image ;
-  // var image = new Image;
-
-  // $(image).load(function () {
-  //     width  = image.width;
-  //     height = image.height;
-  // });
-
-  // img.src = $('.imageContent.imageContent--slider').css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
-  // console.log(img.src);
-  
-  // $(img).on('load', function() {
-  //     var bgImgWidth = img.width;
-  //     var bgImgHeight = img.height;
-  //     console.log("w::"+bgImgWidth+",h::"+bgImgHeight) ;
-  // }) ;
+  }
+  window.onresize = resize; resize();
 
 }
 
-const getBackgroundImageHeight = (elem1, elem2) => {
+const steckImagesVertically = (elem1, elem2) => {
   const img = new Image;
   img.src = $(elem1).css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
 
   $(img).on('load', function() {
-      var bgImgWidth = img.width;
-      var bgImgHeight = img.height;
-      console.log("w::"+bgImgWidth+",h::"+bgImgHeight) ;
+      // var bgImgWidth = img.width;
+      // var bgImgHeight = img.height + "px";
 
-      $(elem2).css({ 'top': bgImgHeight} );
-  }) ;
+ var bgHeight = document.body.offsetWidth * img.height / img.width;
+      
+      // console.log("w::"+bgImgWidth+",h::"+bgImgHeight) ;
+
+      $(elem2).css({ 'top': bgHeight} );
+  });
+
+  // $(window).on("resize", function () {
+  //     // $('body').height($('body').width() * img.height / img.width);
+  //     var bgImgHeight = img.height;
+  //     $(elem2).css({ 'top': bgImgHeight} );
+  // }).resize();
+  
 }
