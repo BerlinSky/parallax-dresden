@@ -1,7 +1,8 @@
 import 'jquery';
 
-import { windowParallaxScrolling } from './js/animation/parallax-scrolling';
+import { windowParallaxScrolling, setTopPositions } from './js/animation/parallax-scrolling';
 
 $(function () {
+  setTopPositions();
   windowParallaxScrolling();
 });
