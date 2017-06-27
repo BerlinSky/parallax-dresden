@@ -1,5 +1,6 @@
 const imageSlider = document.querySelector(".imageContent.imageContent--slider");
 const imageBgNews = document.querySelector(".imageContent.imageContent--news");
+const imageBgTour = document.querySelector(".imageContent.imageContent--tour");
 
 const parallaxScroll = () => {
   const posX = window.scrollX;
@@ -14,6 +15,7 @@ const parallaxScroll = () => {
   translateElem(pentagon, posX, posY * .5);
 
   translateElem(imageBgNews, posX, posY * -0.5);
+  translateElem(imageBgTour, posX, posY * -0.5);
 
   requestAnimationFrame(parallaxScroll);
 }
@@ -29,6 +31,7 @@ export const windowParallaxScrolling = () => {
 
 export const setTopPositions = () => {
   steckImagesVertically(imageSlider, imageBgNews);
+  steckImagesVertically(imageBgNews, imageBgTour);
 
   function resize() {
     const img = new Image;

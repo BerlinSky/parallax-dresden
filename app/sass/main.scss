@@ -29,6 +29,19 @@
   opacity: 1;
 }
 
+.imageContent.imageContent--tour  {
+  background-image: url("../images/tour-bg-bottom.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+  position: fixed;
+  top: 65vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: -6;
+  opacity: 1;
+}
+
 .shape.shape--circle {
   background-image: url("../images/shapes/circle.svg");
   background-repeat: no-repeat;
