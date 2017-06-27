@@ -16,13 +16,26 @@
   opacity: 1;
 }
 
+.imageContent.imageContent--news  {
+  background-image: url("../images/news-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+  position: fixed;
+  top: 70vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: -8;
+  opacity: 1;
+}
+
 .shape.shape--circle {
   background-image: url("../images/shapes/circle.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 35%;
   position: fixed;
-  top: 50vh;
+  top: 70vh;
   width: 100vw;
   height: 100vh;
   z-index: -2;
@@ -35,7 +48,7 @@
   background-position: 97% bottom;
   background-size: 20%;
   position: fixed;
-  top: 90px;
+  top: 120%;
   width: 100vw;
   height: 100vh;
   z-index: -3;
