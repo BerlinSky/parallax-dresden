@@ -30,15 +30,15 @@ export const windowParallaxScrolling = () => {
 }
 
 export const setTopPositions = () => {
-  steckImagesVertically(imageSlider, imageBgNews);
-  steckImagesVertically(imageBgNews, imageBgTour);
+  steckImagesVertically(imageSlider, imageBgTour);
+  steckImagesVertically(imageBgTour, imageBgNews);
 
   function resize() {
     const img = new Image;
     img.src = $(imageSlider).css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
 
     const bgHeight = document.body.offsetWidth * img.height / img.width;
-    $(imageBgNews).css({ 'top': bgHeight} );
+    $(imageBgTour).css({ 'top': bgHeight} );
   }
 
   window.onresize = resize; 

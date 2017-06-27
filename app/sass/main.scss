@@ -16,6 +16,19 @@
   opacity: 1;
 }
 
+.imageContent.imageContent--tour  {
+  background-image: url("../images/tour-bg-bottom.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+  position: fixed;
+  top: 65vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: -8;
+  opacity: 1;
+}
+
 .imageContent.imageContent--news  {
   background-image: url("../images/news-bg.jpg");
   background-repeat: no-repeat;
@@ -29,18 +42,6 @@
   opacity: 1;
 }
 
-.imageContent.imageContent--tour  {
-  background-image: url("../images/tour-bg-bottom.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% 100%;
-  position: fixed;
-  top: 65vh;
-  width: 100vw;
-  height: 100vh;
-  z-index: -6;
-  opacity: 1;
-}
 
 .shape.shape--circle {
   background-image: url("../images/shapes/circle.svg");
