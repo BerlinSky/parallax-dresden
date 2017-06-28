@@ -16,7 +16,7 @@ const parallaxScroll = () => {
   translateElem(square, posX, posY * -2.0);
   translateElem(pentagon, posX, posY * .5);
 
-  translateElem(parallaxWrapper, posX, posY * -0.5);
+  // translateElem(parallaxWrapper, posX, posY * -0.5);
 
   // translateElem(imageBgTour, posX, posY * -0.5);
 
@@ -54,7 +54,7 @@ export const setTopPositions = () => {
     img.src = $(elem1).css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
 
     const bgHeight = document.body.offsetWidth * img.height / img.width;
-    $(elem2).css({ 'top': bgHeight} );
+    $(elem2).css({ 'margin-top': bgHeight} );
   }
 
   // window.onresize = resize(imageSlider, imageBgTour); 
@@ -77,6 +77,6 @@ const steckImagesVertically = (elem1, elem2) => {
     console.log('bgHeight', bgHeight, elem1, elem2);
     const elem2Top = bgHeight + 'px';
 
-    $(elem2).css({ 'top': elem2Top} );
+    $(elem2).css({ 'margin-top': elem2Top} );
   });
 }

@@ -17,25 +17,33 @@
 }
 
 .parallaxWrapper {
-  background-color: tomato;
+  // background-color: tomato;
 
-  position: fixed;
+  // position: fixed;
   // opacity: .5;
   width: 100vw;
-  min-height: 300vh;
-  top: 100px;
-  left: 0;
-  z-index: -80;
+  min-height: 100vh;
+  // top: 100px;
+  // left: 0;
+  // z-index: -80;
 
   .parallaxContainer {
     position: relative;
     width: 100%;
     min-height: 100%;
 
+    .section {
+      margin: 0;
+      background-color: transparent;
+      color: #000;
+      padding: 3rem;
+    }
+
     .imageContent.imageContent--tour  {
       background-image: url("../images/tour-bg-bottom.jpg");
       background-repeat: no-repeat;
       background-position: top center;
+      background-attachment: fixed;
       background-size: 100% 100%;
       position: relative;
       width: 100vw;
@@ -48,6 +56,7 @@
       background-image: url("../images/news-bg.jpg");
       background-repeat: no-repeat;
       background-position: top center;
+      background-attachment: fixed;      
       background-size: 100% 100%;
       position: relative;
       // top: 65vh;
@@ -61,6 +70,7 @@
       background-image: url("../images/videos-bg-bottom.jpg");
       background-repeat: no-repeat;
       background-position: top center;
+      background-attachment: fixed;      
       background-size: 100% 100%;
       position: relative;
       // top: 65vh;
@@ -74,6 +84,7 @@
       background-image: url("../images/music-bg.jpg");
       background-repeat: no-repeat;
       background-position: top center;
+      background-attachment: fixed;      
       background-size: 100% 100%;
       position: relative;
       // top: 65vh;
@@ -132,11 +143,10 @@
     text-align: center;
   }
 
-  .section {
-    margin: 2rem 5rem 0 5rem;
-    background-color: transparent;
-    color: #000;
-    padding: 3rem;
-  }
-
+  // .section {
+  //   margin: 0;
+  //   background-color: transparent;
+  //   color: #000;
+  //   padding: 3rem;
+  // }
 }
