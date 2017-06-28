@@ -1,6 +1,7 @@
 const imageSlider = document.querySelector(".imageContent.imageContent--slider");
 const imageBgNews = document.querySelector(".imageContent.imageContent--news");
 const imageBgTour = document.querySelector(".imageContent.imageContent--tour");
+const imageBgVideo = document.querySelector(".imageContent.imageContent--video");
 
 const parallaxScroll = () => {
   const posX = window.scrollX;
@@ -14,8 +15,9 @@ const parallaxScroll = () => {
   translateElem(square, posX, posY * -2.0);
   translateElem(pentagon, posX, posY * .5);
 
-  translateElem(imageBgNews, posX, posY * -0.5);
   translateElem(imageBgTour, posX, posY * -0.5);
+  translateElem(imageBgNews, posX, posY * -0.5);
+  translateElem(imageBgVideo, posX, posY * -0.5);
 
   requestAnimationFrame(parallaxScroll);
 }
@@ -32,18 +34,32 @@ export const windowParallaxScrolling = () => {
 export const setTopPositions = () => {
   steckImagesVertically(imageSlider, imageBgTour);
   steckImagesVertically(imageBgTour, imageBgNews);
+  steckImagesVertically(imageBgNews, imageBgVideo);
 
-  function resize() {
+  // function resize() {
+  //   const img = new Image;
+  //   img.src = $(imageSlider).css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
+
+  //   const bgHeight = document.body.offsetWidth * img.height / img.width;
+  //   $(imageBgTour).css({ 'top': bgHeight} );
+  // }
+
+  function resize(elem1, elem2) {
     const img = new Image;
-    img.src = $(imageSlider).css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
+    img.src = $(elem1).css('background-image').replace("url(", "").replace(")", "").replace("\"", "").replace("\"", "");
 
     const bgHeight = document.body.offsetWidth * img.height / img.width;
-    $(imageBgTour).css({ 'top': bgHeight} );
+    $(elem2).css({ 'top': bgHeight} );
   }
 
-  window.onresize = resize; 
-  resize();
+  window.onresize = resize(imageSlider, imageBgTour); 
+  window.onresize = resize(imageBgTour, imageBgNews); 
+  window.onresize = resize(imageBgNews, imageBgVideo); 
+  resize(imageSlider, imageBgTour);
+  resize(imageBgTour, imageBgNews);
+  resize(imageBgNews, imageBgVideo);
 }
+
 
 const steckImagesVertically = (elem1, elem2) => {
   const img = new Image;
@@ -51,6 +67,10 @@ const steckImagesVertically = (elem1, elem2) => {
 
   $(img).on('load', function() {
     const bgHeight = document.body.offsetWidth * img.height / img.width;
-    $(elem2).css({ 'top': bgHeight} );
+    
+    console.log('bgHeight', bgHeight, elem1, elem2);
+    const elem2Top = bgHeight + 'px';
+
+    $(elem2).css({ 'top': elem2Top} );
   });
 }

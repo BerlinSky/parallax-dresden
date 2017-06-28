@@ -12,7 +12,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -10;
+  z-index: -100;
   opacity: 1;
 }
 
@@ -25,7 +25,7 @@
   top: 65vh;
   width: 100vw;
   height: 100vh;
-  z-index: -8;
+  z-index: -80;
   opacity: 1;
 }
 
@@ -38,7 +38,20 @@
   top: 65vh;
   width: 100vw;
   height: 100vh;
-  z-index: -8;
+  z-index: -70;
+  opacity: 1;
+}
+
+.imageContent.imageContent--video  {
+  background-image: url("../images/videos-bg-bottom.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+  position: fixed;
+  top: 65vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: -60;
   opacity: 1;
 }
 
