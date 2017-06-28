@@ -2,7 +2,7 @@
 @import 'layout/all-layout';
 @import 'modules/all-module';
 
- .imageContent.imageContent--slider {
+.imageContent.imageContent--slider {
   background-image: url("../images/nickelback-slider.png");
   background-repeat: no-repeat;
   background-position: center 10%;
@@ -16,45 +16,74 @@
   opacity: 1;
 }
 
-.imageContent.imageContent--tour  {
-  background-image: url("../images/tour-bg-bottom.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% 100%;
+.parallaxWrapper {
+  background-color: tomato;
+
   position: fixed;
-  top: 65vh;
+  // opacity: .5;
   width: 100vw;
-  height: 100vh;
+  min-height: 300vh;
+  top: 100px;
+  left: 0;
   z-index: -80;
-  opacity: 1;
-}
 
-.imageContent.imageContent--news  {
-  background-image: url("../images/news-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% 100%;
-  position: fixed;
-  top: 65vh;
-  width: 100vw;
-  height: 100vh;
-  z-index: -70;
-  opacity: 1;
-}
+  .parallaxContainer {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
 
-.imageContent.imageContent--video  {
-  background-image: url("../images/videos-bg-bottom.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% 100%;
-  position: fixed;
-  top: 65vh;
-  width: 100vw;
-  height: 100vh;
-  z-index: -60;
-  opacity: 1;
-}
+    .imageContent.imageContent--tour  {
+      background-image: url("../images/tour-bg-bottom.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% 100%;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      // z-index: -80;
+      opacity: 1;
+    }
 
+    .imageContent.imageContent--news  {
+      background-image: url("../images/news-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% 100%;
+      position: relative;
+      // top: 65vh;
+      width: 100vw;
+      height: 100vh;
+      // z-index: -70;
+      opacity: 1;
+    }
+
+    .imageContent.imageContent--video  {
+      background-image: url("../images/videos-bg-bottom.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% 100%;
+      position: relative;
+      // top: 65vh;
+      width: 100vw;
+      height: 100vh;
+      // z-index: -60;
+      opacity: 1;
+    }
+
+    .imageContent.imageContent--music  {
+      background-image: url("../images/music-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% 100%;
+      position: relative;
+      // top: 65vh;
+      width: 100vw;
+      height: 100vh;
+      // z-index: -60;
+      opacity: 1;
+    }
+  }
+}
 
 .shape.shape--circle {
   background-image: url("../images/shapes/circle.svg");
