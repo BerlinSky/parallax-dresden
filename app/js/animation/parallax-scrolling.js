@@ -1,8 +1,8 @@
 const imageSlider = document.querySelector(".imageContent.imageContent--slider");
 const parallaxWrapper = document.querySelector(".parallaxWrapper");
-// const imageBgNews = document.querySelector(".imageContent.imageContent--news");
-// const imageBgTour = document.querySelector(".imageContent.imageContent--tour");
-// const imageBgVideo = document.querySelector(".imageContent.imageContent--video");
+const imageBgTour = document.querySelector(".imageContent.imageContent--tour");
+const imageBgNews = document.querySelector(".imageContent.imageContent--news");
+const imageBgVideo = document.querySelector(".imageContent.imageContent--video");
 
 const parallaxScroll = () => {
   const posX = window.scrollX;
@@ -16,12 +16,13 @@ const parallaxScroll = () => {
   translateElem(square, posX, posY * -2.0);
   translateElem(pentagon, posX, posY * .5);
 
+  translateElem(imageBgTour, posX, posY * -0.35);
+  translateElem(imageBgNews, posX, posY * -0.25);
+  translateElem(imageBgVideo, posX, posY * -0.15);
+
   // translateElem(parallaxWrapper, posX, posY * -0.5);
 
-  // translateElem(imageBgTour, posX, posY * -0.5);
 
-  // translateElem(imageBgNews, posX, posY * -0.5);
-  // translateElem(imageBgVideo, posX, posY * -0.5);
 
   requestAnimationFrame(parallaxScroll);
 }
